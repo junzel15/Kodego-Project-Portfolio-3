@@ -8,7 +8,38 @@
     <title>Movies</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Search Movie</h1>
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <ul id="results"></ul>
+    </div>
     <div class="movies"></div>
     <script src="main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const resultsList = document.getElementById("results");
+
+        searchInput.addEventListener("input", function () {
+          const searchTerm = searchInput.value.toLowerCase();
+          const items = document.querySelectorAll("li");
+
+          resultsList.innerHTML = "";
+
+          items.forEach(function (item) {
+            if (item.textContent.toLowerCase().includes(searchTerm)) {
+              resultsList.appendChild(item.cloneNode(true));
+            }
+          });
+
+          if (resultsList.children.length === 0) {
+            const noResults = document.createElement("li");
+            noResults.textContent = "No results found";
+            resultsList.appendChild(noResults);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
