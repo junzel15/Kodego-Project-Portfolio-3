@@ -1,4 +1,4 @@
-fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game", {
+fetch("https://imdb8.p.rapidapi.com/auto-complete?q=movies", {
   method: "GET",
   headers: {
     "x-rapidapi-host": "imdb8.p.rapidapi.com",

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 body {
-  background: #000;
+  background: white;
 }
 
 .movies {
@@ -20,7 +20,7 @@ body {
   padding: 15px;
   border-radius: 12px;
   text-align: center;
-  background: #272727;
+  background: grey;
 }
 
 .movies li img {
@@ -40,7 +40,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: grey;
 }
 
 .container {
@@ -78,4 +78,8 @@ li:last-child {
 li:hover {
   background-color: #f9f9f9;
   cursor: pointer;
+}
+
+.ef {
+  font-size: 50px;
 }
